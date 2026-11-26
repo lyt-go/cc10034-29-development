@@ -150,7 +150,7 @@ class TestWriteAndActions:
         values = {"查询编号": "DIFF-TEST", "查询语句": "SELECT COUNT(*) FROM t", "查询用户": "tester"}
         entry, _ = service.create_entry(values)
         assert entry is not None
-        assert entry["id"] == 4
+        assert entry["id"] == 5  # 差分查询示例数据含 DIFF-0004，最大 ID 为 4
 
     def test_create_all_required_fields(self):
         """行为类模块完整字段创建。"""
